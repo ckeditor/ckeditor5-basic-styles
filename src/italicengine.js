@@ -10,7 +10,7 @@ import BuildModelConverterFor from '../engine/conversion/model-converter-builder
 import BuildViewConverterFor from '../engine/conversion/view-converter-builder.js';
 import AttributeCommand from '../command/attributecommand.js';
 
-const ITALIC = 'italic';
+const italic = 'italic';
 
 export default class ItalicEngine extends Feature {
 	init() {
@@ -19,11 +19,11 @@ export default class ItalicEngine extends Feature {
 		const editing = editor.editing;
 
 		// Allow italic attribute on all inline nodes.
-		editor.document.schema.allow( { name: '$inline', attributes: [ ITALIC ] } );
+		editor.document.schema.allow( { name: '$inline', attributes: [ italic ] } );
 
 		// Build converter from model to view for data and editing pipelines.
 		BuildModelConverterFor( data.modelToView, editing.modelToView )
-			.fromAttribute( ITALIC )
+			.fromAttribute( italic )
 			.toElement( 'em' );
 
 		// Build converter from view to model for data pipeline.
@@ -31,9 +31,9 @@ export default class ItalicEngine extends Feature {
 			.fromElement( 'em' )
 			.fromElement( 'i' )
 			.fromAttribute( 'style', { 'font-style': 'italic' } )
-			.toAttribute( ITALIC, true );
+			.toAttribute( italic, true );
 
 		// Create italic command.
-		editor.commands.set( ITALIC, new AttributeCommand( editor, ITALIC ) );
+		editor.commands.set( italic, new AttributeCommand( editor, italic ) );
 	}
 }
