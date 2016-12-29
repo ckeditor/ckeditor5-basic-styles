@@ -42,6 +42,7 @@ export default class Italic extends Plugin {
 			view.set( {
 				label: t( 'Italic' ),
 				icon: 'italic',
+				tooltip: true,
 				keystroke
 			} );
 

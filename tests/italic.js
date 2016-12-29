@@ -49,6 +49,7 @@ describe( 'Italic', () => {
 		expect( italicView.label ).to.equal( 'Italic' );
 		expect( italicView.icon ).to.equal( 'italic' );
 		expect( italicView.keystroke ).to.equal( 'CTRL+I' );
+		expect( italicView.tooltip ).to.be.true;
 	} );
 
 	it( 'should execute italic command on model execute event', () => {

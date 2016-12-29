@@ -49,6 +49,7 @@ describe( 'Bold', () => {
 		expect( boldView.label ).to.equal( 'Bold' );
 		expect( boldView.icon ).to.equal( 'bold' );
 		expect( boldView.keystroke ).to.equal( 'CTRL+B' );
+		expect( boldView.tooltip ).to.be.true;
 	} );
 
 	it( 'should execute bold command on model execute event', () => {

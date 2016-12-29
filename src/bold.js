@@ -42,6 +42,7 @@ export default class Bold extends Plugin {
 			view.set( {
 				label: t( 'Bold' ),
 				icon: 'bold',
+				tooltip: true,
 				keystroke
 			} );
 
