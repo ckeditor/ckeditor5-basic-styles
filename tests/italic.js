@@ -5,12 +5,12 @@
 
 /* globals document */
 
-import ClassicTestEditor from 'tests/core/_utils/classictesteditor.js';
-import Italic from 'ckeditor5/basic-styles/italic.js';
-import ItalicEngine from 'ckeditor5/basic-styles/italicengine.js';
-import ButtonView from 'ckeditor5/ui/button/buttonview.js';
-import testUtils from 'tests/core/_utils/utils.js';
-import { keyCodes } from 'ckeditor5/utils/keyboard.js';
+import ClassicTestEditor from 'ckeditor5-core/tests/_utils/classictesteditor';
+import Italic from 'ckeditor5-basic-styles/src/italic';
+import ItalicEngine from 'ckeditor5-basic-styles/src/italicengine';
+import ButtonView from 'ckeditor5-ui/src/button/buttonview';
+import testUtils from 'ckeditor5-core/tests/_utils/utils';
+import { keyCodes } from 'ckeditor5-utils/src/keyboard';
 
 testUtils.createSinonSandbox();
 
@@ -47,7 +47,7 @@ describe( 'Italic', () => {
 		expect( italicView ).to.be.instanceOf( ButtonView );
 		expect( italicView.isOn ).to.be.false;
 		expect( italicView.label ).to.equal( 'Italic' );
-		expect( italicView.icon ).to.equal( 'italic' );
+		expect( italicView.icon ).to.match( /<svg / );
 		expect( italicView.keystroke ).to.equal( 'CTRL+I' );
 		expect( italicView.tooltip ).to.be.true;
 	} );
