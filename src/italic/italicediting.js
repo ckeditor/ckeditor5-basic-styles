@@ -16,7 +16,7 @@ const ITALIC = 'italic';
  * The italic editing feature.
  *
  * It registers the `'italic'` command, the <kbd>Ctrl+I</kbd> keystroke and introduces the `italic` attribute in the model
- * which renders to the view as an `<em>` element.
+ * which renders to the view as an `<i>` element, or `<em>` if the option `basicStyles.useEmTag = true` is specified.
  *
  * @extends module:core/plugin~Plugin
  */
@@ -27,14 +27,17 @@ export default class ItalicEditing extends Plugin {
 	init() {
 		const editor = this.editor;
 
+		const options = editor.config.get( 'basicStyles' ) || {};
+		const [ tag, secondaryTag ] = options.useEmTag ? [ 'em', 'i' ] : [ 'i', 'em' ];
+
 		// Allow italic attribute on text nodes.
 		editor.model.schema.extend( '$text', { allowAttributes: ITALIC } );
 
 		editor.conversion.attributeToElement( {
 			model: ITALIC,
-			view: 'i',
+			view: tag,
 			upcastAlso: [
-				'em',
+				secondaryTag,
 				{
 					styles: {
 						'font-style': 'italic'
