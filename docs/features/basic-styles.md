@@ -41,6 +41,10 @@ By default, each feature can upcast more than one type of the content. Here's th
 | {@link module:basic-styles/subscript~Subscript} | `<sub>`, `<* style="vertical-align: sub">` |
 | {@link module:basic-styles/superscript~Superscript} | `<sup>`, `<* style="vertical-align: super">` |
 
+## Integration
+
+The basic styles features are integrated with the {@link features/remove-format Remove Format} plugin by default. There is no need to provide any additional configuration to those plugins in order to use the remove format functionality over elements with applied any basic styles.
+
 ## Installation
 
 To add the basic styles features to your editor install the [`@ckeditor/ckeditor5-basic-styles`](https://www.npmjs.com/package/@ckeditor/ckeditor5-basic-styles) package:
