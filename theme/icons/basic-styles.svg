@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>basic-styles</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basic-styles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M20,15 L20,17 L18,17 L18,15 L20,15 Z M20,12 L20,14 L18,14 L18,12 L20,12 Z M20,9 L20,11 L18,11 L18,9 L20,9 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M11.816,11.5 L9.038,4.785 L6.261,11.5 L11.816,11.5 L11.816,11.5 Z M12.436,13 L5.641,13 L3.975,17.028 L2.312,17.028 L8.101,3.028 L9.976,3.028 L15.765,17.028 L14.102,17.028 L12.436,13 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>
